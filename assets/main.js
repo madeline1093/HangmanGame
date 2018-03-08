@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 let words = ['maine coon', 'siamese', 'ragdoll', 'persian', 'bengal', 'sphynx', 'abyssinian','burmese', 'russian blue', 'scottish fold', 'american shorthair', 'savannah', 'javanese', 'havana brown', 'oriental'];
 let dashGuess = [];
 let userKey = 'c';
@@ -23,7 +25,11 @@ dashGuessStr = dashGuess.join(" ");
 
 console.log(dashGuessStr);
 
-document.write('hello');
+//when i press a key, i want to pass through the function an object (a button)
+document.onkeyup = function(event) {
+  let letter
+  console.log(event.key);
+}
 
 // 1st event - page loads
 // music plays on page load
@@ -39,3 +45,5 @@ document.write('hello');
 // if all keys in the array item are guessed correctly, number of guesses will go up
 // current word will reset to a different item in the array, not the same item
 // letters guessed array will clear
+
+});
